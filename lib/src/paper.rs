@@ -58,8 +58,8 @@ pub struct CoinParams {
 pub fn params(is_testnet: bool) -> CoinParams {
     if is_testnet {
         CoinParams {
-            taddress_version : [0x1D, 0x25],
-            tsecret_prefix   : [0xEF],
+            taddress_version : [0x00],
+            tsecret_prefix   : [0x80],
             zaddress_prefix  : "ztestsapling".to_string(),
             zsecret_prefix   : "secret-extended-key-test".to_string(),
             zviewkey_prefix  : "zviewtestsapling".to_string(),
@@ -67,12 +67,12 @@ pub fn params(is_testnet: bool) -> CoinParams {
         }
     } else {
         CoinParams {
-            taddress_version : [0x1C, 0xB8],
-            tsecret_prefix   : [0x80],
+            taddress_version : [0x3C],
+            tsecret_prefix   : [0xBC],
             zaddress_prefix  : "zs".to_string(),
             zsecret_prefix   : "secret-extended-key-main".to_string(),
             zviewkey_prefix  : "zviews".to_string(),
-            cointype         : 133
+            cointype         : 141
         }
     }
 }
