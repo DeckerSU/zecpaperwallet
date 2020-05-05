@@ -47,7 +47,7 @@ pub fn double_sha256(payload: &[u8]) -> Vec<u8> {
 /// to get these values. 
 /// Usually these will be different for testnet and for mainnet.
 pub struct CoinParams {
-    pub taddress_version: [u8; 2],
+    pub taddress_version: [u8; 1],
     pub tsecret_prefix  : [u8; 1],
     pub zaddress_prefix : String,
     pub zsecret_prefix  : String,
